@@ -6,6 +6,8 @@ import './App.scss';
 const HOW_MANY_STAGE = 'how_many'
 const GAME_STAGE = 'game'
 
+let placesUsed = [];
+
 function App() {
   const [stage, setStage] = useState(null);
   const [numberOfPlayers, setNumberOfPlayers] = useState('');
@@ -36,10 +38,26 @@ function App() {
     setSpyIndex(randomSpyIndex - 1);
     setPlayers(playersAccordingToRequest);
 
-    const randomPlaceIndex = Math.ceil(Math.random() * places.length);
-    setCurrentPlace(places[randomPlaceIndex - 1]);
+    const place = getNewPlace();
+    setCurrentPlace(place);
 
     setStage(GAME_STAGE);
+  }
+
+  const getNewPlace = () => {
+    const randomPlaceIndex = Math.ceil(Math.random() * places.length);
+    let place = places[randomPlaceIndex - 1];
+
+    if (placesUsed.includes(place)) {
+      place = getNewPlace();
+    }
+
+    placesUsed.push(place);
+
+    if (placesUsed.length === places.length) {
+      placesUsed = [];
+    }
+    return place;
   }
 
   const createHandlePlayerClicked = (playerIndex) => {
@@ -58,8 +76,8 @@ function App() {
     const randomSpyIndex = Math.ceil(Math.random() * numberOfPlayers);
     setSpyIndex(randomSpyIndex - 1);
 
-    const randomPlaceIndex = Math.ceil(Math.random() * places.length);
-    setCurrentPlace(places[randomPlaceIndex - 1]);
+    const place = getNewPlace();
+    setCurrentPlace(place);
 
     setOpenedIndexes([]);
   }
