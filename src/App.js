@@ -100,7 +100,7 @@ function App() {
         </div>
       </div>
 
-      <div className="copyrights-container">© Elior Abramoviz</div>
+      <div className="copyrights-container">Elior Abramoviz ©</div>
     </div>
 
   );
