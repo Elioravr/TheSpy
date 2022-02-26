@@ -99,6 +99,8 @@ function App() {
           <div className="spy spy-4">{"🕵️‍♀️"}</div>
         </div>
       </div>
+
+      <div className="copyrights-container">© Elior Abramoviz</div>
     </div>
 
   );

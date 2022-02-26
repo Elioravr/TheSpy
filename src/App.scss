@@ -182,6 +182,13 @@ $main-color: #007bff;
     border: 3px solid $main-color;
     margin-top: 60px;
   }
+
+  .copyrights-container {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+  }
 }
 
 @keyframes bouncing {
