@@ -168,7 +168,7 @@ $main-color: #007bff;
     }
   }
 
-  .new-game-button {
+  .game-button {
     font-size: 18px;
     background-color: $main-color;
     box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
@@ -180,7 +180,13 @@ $main-color: #007bff;
     align-items: center;
     margin: 15px auto;
     border: 3px solid $main-color;
-    margin-top: 60px;
+
+    &.new-game-button {
+      margin-top: 60px;
+    }
+    &.change-number-of-players-container {
+      margin-top: 10px;
+    }
   }
 
   .copyrights-container {
@@ -247,44 +253,44 @@ $main-color: #007bff;
 
 @keyframes spy-1 {
   0% {
-      transform: translateX(20px) translateY(-20px) scale(1) rotate(0);
-      opacity: 1;
+    transform: translateX(20px) translateY(-20px) scale(1) rotate(0);
+    opacity: 1;
   }
   100% {
-      transform: translateX(220px) translateY(-160px) scale(0.3) rotate(720deg);
-      opacity: 0;
+    transform: translateX(220px) translateY(-160px) scale(0.3) rotate(720deg);
+    opacity: 0;
   }
 }
 
 @keyframes spy-2 {
   0% {
-      transform: translateX(20px) translateY(-20px) scale(1) rotate(0);
-      opacity: 1;
+    transform: translateX(20px) translateY(-20px) scale(1) rotate(0);
+    opacity: 1;
   }
   100% {
-      transform: translateX(-220px) translateY(160px) scale(0.3) rotate(720deg);
-      opacity: 0;
+    transform: translateX(-220px) translateY(160px) scale(0.3) rotate(720deg);
+    opacity: 0;
   }
 }
 
 @keyframes spy-3 {
   0% {
-      transform: translateX(20px) translateY(-20px) scale(1) rotate(0);
-      opacity: 1;
+    transform: translateX(20px) translateY(-20px) scale(1) rotate(0);
+    opacity: 1;
   }
   100% {
-      transform: translateX(-220px) translateY(-160px) scale(0.3) rotate(720deg);
-      opacity: 0;
+    transform: translateX(-220px) translateY(-160px) scale(0.3) rotate(720deg);
+    opacity: 0;
   }
 }
 
 @keyframes spy-4 {
   0% {
-      transform: translateX(20px) translateY(-20px) scale(1) rotate(0);
-      opacity: 1;
+    transform: translateX(20px) translateY(-20px) scale(1) rotate(0);
+    opacity: 1;
   }
   100% {
-      transform: translateX(220px) translateY(160px) scale(0.3) rotate(720deg);
-      opacity: 0;
+    transform: translateX(220px) translateY(160px) scale(0.3) rotate(720deg);
+    opacity: 0;
   }
 }
